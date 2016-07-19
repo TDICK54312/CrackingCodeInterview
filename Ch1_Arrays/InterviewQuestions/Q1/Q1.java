@@ -15,8 +15,14 @@ public class Q1{
         for(int i = 0; i < aString.length(); i++){
             char theChar = aString.charAt(i);
 
+            if(Character.isUpperCase(theChar))
+                theChar = Character.toLowerCase(theChar);
+
             for(int j = i+1; j < aString.length(); j++){
                 char otherChar = aString.charAt(j);
+
+                if(Character.isUpperCase(otherChar))
+                    otherChar = Character.toLowerCase(otherChar);
 
                 if(theChar == otherChar){
                     result = false;
