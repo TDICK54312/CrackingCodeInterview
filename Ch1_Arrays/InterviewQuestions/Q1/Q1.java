@@ -10,10 +10,29 @@ public class Q1{
         printOutput(theString, value);
     }
     public static boolean isUnique(String aString){
-        
-    }
-    public static void printOutput(boolean aValue){
+        boolean result = true;
 
+        for(int i = 0; i < aString.length(); i++){
+            char theChar = aString.charAt(i);
+
+            for(int j = i+1; j < aString.length(); j++){
+                char otherChar = aString.charAt(j);
+
+                if(theChar == otherChar){
+                    result = false;
+                    return result;
+                }
+            }
+        }
+        return result;
+    }
+    public static void printOutput(String theString,boolean aValue){
+        if(aValue){
+            System.out.println(theString + " is unique!");
+        }
+        else{
+            System.out.println(theString + " is NOT unique!");
+        }
     }
 }
 
